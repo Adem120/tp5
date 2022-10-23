@@ -1,0 +1,36 @@
+<div class="container">
+    <div>
+    <h2>Modifier un  employeur :</h2>
+    </div>
+    <form >
+        <div  class="col-sm-2 col-md-2 col-lg-2">
+            <label >ID  employeur</label>
+            <input readonly type="text" [(ngModel)]="currentMachine.idmachine"
+            name="idProduit" class="form-control">
+            </div>
+    <div class="col-sm-4 col-md-4 col-lg-4" >
+    <label >Nom  employeur</label>
+    <input type="text"[(ngModel)]= "currentMachine.nommachine"
+    name="nomProduit" class="form-control">
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2">
+    <label >salaire</label>
+    <input type="number" [(ngModel)]= "currentMachine.prixmachine"
+    name="prixProduit" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+
+<label >Date rectretement</label>
+
+<input type="date" [ngModel]="currentMachine.dateachat| date: 'yyyy-MM-dd'"
+(ngModelChange)=" currentMachine.dateachat= $event" name="dateCreation"
+class="form-control">
+</div>
+<div class="mt-2">
+
+<button type="submit" (click)="updateProduit()" class="btn btn-success">Modifer</button>
+
+</div>
+</form>
+
+</div>
